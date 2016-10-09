@@ -1,0 +1,96 @@
+body {
+	background-color: #FFEBB3;
+}
+
+.filter {
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+.filter-block {
+	display: inline-block;
+	width: 100%;
+}
+
+.filter-right {
+	float: right;
+}
+
+.filter-left {
+	float: left;
+}
+
+#filter-list {
+	margin: auto;
+	width: 500px;
+	text-align: center;
+}
+
+#filter-list span {
+	margin-bottom: 15px;
+}
+
+#titles {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+#list {
+	/*display: none;*/
+	margin-top: 80px;
+	margin-left: 20%;
+	margin-right: 20%;
+	width: 60%;
+}
+
+.result {
+	max-width: 1000px;
+	padding: 25px;
+	min-height: 200px;
+	border-radius: 5px;
+	margin: auto auto 30px auto;
+	display:block;
+	overflow:auto;
+
+	background-color: #DBC381;
+}
+
+.result-left {	
+	float: left;
+	width: 60%;
+}
+
+.result-middle {
+	margin-top: 0.5%;
+	float: right;
+}
+
+.result-right {
+	margin-left: 15px;
+	float: right;
+}
+
+.beer-picture {
+	float: left;
+	height: 150px;
+	width: 150px;
+	border-radius: 100%;
+	margin-right: 5%;
+}
+
+.beer-flag, .beer-taste, .beer-flavor {
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+	margin-bottom: 15px;
+}
+
+.beer-color {
+	max-width: 30px;
+	margin-bottom: 5px;
+}
+
+#empty-list {
+	display: none;
+	text-align: center;
+}
