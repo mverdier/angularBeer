@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+  	<div id="titles">
+
+	    <h1 id="">Looking for a beer?</h1>
+	    <h2 id="">Let's get you matched up!</h2>
+
+    </div>
+
+	<div class="main" ng-controller="MainController">
+	    <div id="filter-list">
+
+	    <p>Don't worry, you don't have to fill all of these, just the ones you like.</p>
+
+	    	<form>
+	    		<div class="filter-block">
+		    		<div class="filter filter-left">
+			    		<label>What's the brand?</label><br>
+			    		<input type="text" name="brand" ng-model="brand">
+		    		</div>
+
+		    		<div class="filter filter-right">
+		    			<label>Does it have a name?</label><br>
+		    			<input type="text" name="name" ng-model="name">
+	    			</div>
+    			</div>
+
+    			<div class="filter-block">
+		    		<div class="filter filter-left">
+			    		<label>Want a specific color type?</label><br>
+					    <select id="color" ng-model="color">
+					    	<option value="Blonde">Blonde</option>
+					    	<option value="Amber">Amber</option>
+					    	<option value="Brown">Brown</option>
+					    	<option value="Black">Black</option>
+					    	<option value="Red">Red</option>
+					    </select>
+				    </div>
+
+			    	<div class="filter filter-right">
+				    	<label>Where do you want it from?</label><br>
+					    <select id="country" ng-model="country">
+					    	<option value="DE">Germany</option>
+					    	<option value="BE">Belgium</option>
+					    	<option value="US">USA</option>
+					    	<option value="IR">Ireland</option>
+					    	<option value="NL">Netherlands</option>
+					    </select>
+				    </div>
+			    </div>
+
+			    <div class="filter-block">
+				    <div class="filter filter-left">
+					    <label>Want it flavored?</label><br>
+					    <select id="flavor" ng-model="flavor">
+					    	<option value="not">No flavor</option>
+					    	<option value="fruit">Fruits</option>
+					    	<option value="tequila">Tequila</option>
+					    </select>
+				    </div>
+
+				    <div class="filter filter-right">
+					    <label>How does it to taste like?</label><br>
+					    <select id="taste" ng-model="taste">
+					    	<option value="bitter">Bitter</option>
+					    	<option value="sugar">Sugar</option>
+				    	</select>
+			    	</div>
+		    	</div>
+
+		    </form>
+
+		    <button ng-click="search()" id="submit">Search!</button>
+	    </div>
+
+	    <div id="list">
+	    	<div class="result" ng-repeat="r in results">
+	    		<img class="beer-picture" ng-src="{{r.picture}}" alt="{{r.name}}">
+	    		
+	    		<div class="result-left">
+		    		<h3 class="beer-name">{{r.name}}</h3>
+		    		<p class="beer-brand">{{r.brand}}</p>
+		    		<p class="beer-description">{{r.description}}</p>
+	    		</div>
+
+	    		<div class="result-right">
+		    		<img class="beer-flavor" ng-src="resource/flavor/flavor_{{r.flavor}}.png" alt="This beer is {{r.flavor}} flavored"><br>
+		    		<img class="beer-taste" ng-src="resource/taste/taste_{{r.taste}}.png" alt="This beer tastes like {{r.taste}}"><br>
+		    		<img class="beer-flag" ng-src="resource/flag/flag_{{r.country}}.png" alt="This beer was made in {{r.countryLong}}"><br>
+	    		</div>
+
+	    		<div class="result-middle">
+		    		<p class="beer-abv">{{r.abv}}%</p>
+		    		<img class="beer-color" ng-src="resource/color/color_{{r.color}}.png" alt="This beer is {{r.color}}"><br>
+	    		</div>
+	    	</div>
+	    </div>
+
+	    <div id="empty-list">
+	    	<p>Unfortunately, there were no results for your query.  Care to try again with different filters?</p>
+	    	<p>If you want us to add a missing beer, you can shoot us an email over at <a href="mailto:contact@email.com">contact@email.com</a>!  Don't forget to give us as much information as you can!</p>
+	    </div>
+    </div>
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+  </body>
+</html>
