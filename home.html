@@ -37,6 +37,7 @@
 		    		<div class="filter filter-left">
 			    		<label>Want a specific color type?</label><br>
 					    <select id="color" ng-model="color">
+						<option value="" selected="selected">Any</option>
 					    	<option value="Blonde">Blonde</option>
 					    	<option value="Amber">Amber</option>
 					    	<option value="Brown">Brown</option>
@@ -48,6 +49,7 @@
 			    	<div class="filter filter-right">
 				    	<label>Where do you want it from?</label><br>
 					    <select id="country" ng-model="country">
+						<option value="" selected="selected">Any</option>
 					    	<option value="DE">Germany</option>
 					    	<option value="BE">Belgium</option>
 					    	<option value="US">USA</option>
@@ -61,6 +63,7 @@
 				    <div class="filter filter-left">
 					    <label>Want it flavored?</label><br>
 					    <select id="flavor" ng-model="flavor">
+						<option value="" selected="selected">Doesn't matter</option>
 					    	<option value="not">No flavor</option>
 					    	<option value="fruit">Fruits</option>
 					    	<option value="tequila">Tequila</option>
@@ -70,6 +73,7 @@
 				    <div class="filter filter-right">
 					    <label>How does it to taste like?</label><br>
 					    <select id="taste" ng-model="taste">
+						<option value="" selected="selected">I don't care</option>
 					    	<option value="bitter">Bitter</option>
 					    	<option value="sugar">Sugar</option>
 				    	</select>
