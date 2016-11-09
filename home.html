@@ -19,21 +19,20 @@
 		<div class="main" ng-controller="MainController">
 			<section class="container">
 		
-				<p>Don't worry, you don't have to fill all of these, just the ones you like.</p>
+				<p class="center">Don't worry, you don't have to fill all of these, just the ones you like.</p>
 
-				<form>
-					<div class="filter col-sm-6">
-						<label>What's the brand?</label><br>
-						<input type="text" name="brand" ng-model="brand">
+				<div class="row">
+					<div class="filter col s6 input-field">
+						<input id="beer_brand" type="text" name="brand" ng-model="brand">
+						<label for="beer_brand">What's the brand?</label>
 					</div>
 
-					<div class="filter col-sm-6">
-						<label>Does it have a name?</label><br>
-						<input type="text" name="name" ng-model="name">
+					<div class="filter col s6 input-field">
+						<input id="beer_name" type="text" name="name" ng-model="name">
+						<label for="beer_name">Does it have a name?</label>
 					</div>
 
-					<div class="filter col-sm-6">
-						<label>Want a specific color type?</label><br>
+					<div class="filter col s6 input-field">
 						<select id="color" ng-model="color">
 							<option value="" selected="selected">Any</option>
 							<option value="Blonde">Blonde</option>
@@ -42,10 +41,10 @@
 							<option value="Black">Black</option>
 							<option value="Red">Red</option>
 						</select>
+						<label>Want a specific color type?</label>
 					</div>
 
-					<div class="filter col-sm-6">
-						<label>Where do you want it from?</label><br>
+					<div class="filter col s6 input-field">
 						<select id="country" ng-model="country">
 							<option value="" selected="selected">Any</option>
 							<option value="DE">Germany</option>
@@ -54,30 +53,32 @@
 							<option value="IR">Ireland</option>
 							<option value="NL">Netherlands</option>
 						</select>
+						<label>Where do you want it from?</label>
 					</div>
 
-					<div class="filter col-sm-6">
-						<label>Want it flavored?</label><br>
-						<select id="flavor" ng-model="flavor">
-						<option value="" selected="selected">Doesn't matter</option>
+					<div class="filter col s6 input-field">
+						<select multiple id="flavor" ng-model="flavor">
+							<option value="" selected="selected">Doesn't matter</option>
 							<option value="not">No flavor</option>
 							<option value="fruit">Fruits</option>
 							<option value="tequila">Tequila</option>
 						</select>
+						<label>Want it flavored?</label>
 					</div>
 
-					<div class="filter col-sm-6">
-						<label>How does it to taste like?</label><br>
+					<div class="filter col s6 input-field">
 						<select id="taste" ng-model="taste">
-						<option value="" selected="selected">I don't care</option>
+							<option value="" selected="selected">I don't care</option>
 							<option value="bitter">Bitter</option>
 							<option value="sugar">Sugar</option>
 						</select>
+						<label>How does it to taste like?</label>
 					</div>
+				</div>
 
-				</form>
-
-				<button ng-click="search()" id="submit">Search!</button>
+				<div class="center">
+					<a class="waves-effect waves-light btn" ng-click="search()" id="submit">Search!</a>
+				</div>
 			</section>
 
 			<section id="list" class="container">
@@ -113,10 +114,17 @@
 		<script src="js/app.js"></script>
 
 		<!-- Materialize -->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/materialize.min.js"></script>
 
 		<!-- Controllers -->
 		<script src="js/controllers/MainController.js"></script>
 
+		<!-- This is awful but needed to make materialize's JS work -->
+		<script>
+			$(document).ready(function() {
+				$('select').material_select();
+			});
+		</script>
 	</body>
 </html>

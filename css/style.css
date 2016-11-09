@@ -1,33 +1,5 @@
 body {
-	background-color: #FFEBB3;
-}
-
-.filter {
-	margin-bottom: 10px;
-	width: 50%;
-}
-
-.filter-block {
-	display: inline-block;
-	width: 100%;
-}
-
-.filter-right {
-	float: right;
-}
-
-.filter-left {
-	float: left;
-}
-
-#filter-list {
-	margin: auto;
-	width: 500px;
-	text-align: center;
-}
-
-#filter-list span {
-	margin-bottom: 15px;
+	background-color: #FCFCFC;
 }
 
 #titles {
