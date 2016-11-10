@@ -15,17 +15,8 @@ body {
 	padding-top: 15px;
 }
 
-.result-left {	
-	float: left;
-	width: 60%;
-}
-
-.result-middle {
+.result-middle, .result-right {
 	margin-top: 0.5%;
-	float: right;
-}
-
-.result-right {
 	margin-left: 15px;
 	float: right;
 }

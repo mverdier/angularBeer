@@ -98,11 +98,6 @@
 							<div class="card-reveal">
 								<span class="card-title grey-text text-darken-4">{{r.name}}<i class="material-icons right">close</i></span>
 
-								<div class="result-left">
-									<p class="beer-brand">{{r.brand}}</p>
-									<p class="beer-description">{{r.description}}</p>
-								</div>
-
 								<div class="result-right">
 									<img class="beer-flavor" ng-src="resource/flavor/flavor_{{r.flavor}}.png" alt="This beer is {{r.flavor}} flavored"><br>
 									<img class="beer-taste" ng-src="resource/taste/taste_{{r.taste}}.png" alt="This beer tastes like {{r.taste}}"><br>
@@ -112,6 +107,11 @@
 								<div class="result-middle">
 									<p class="beer-abv">{{r.abv}}%</p>
 									<img class="beer-color" ng-src="resource/color/color_{{r.color}}.png" alt="This beer is {{r.color}}"><br>
+								</div>
+
+								<div class="result-left">
+									<p class="beer-brand">{{r.brand}}</p>
+									<p class="beer-description">{{r.description}}</p>
 								</div>
 							</div>
 						</div>
