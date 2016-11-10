@@ -15,18 +15,6 @@ body {
 	padding-top: 15px;
 }
 
-.result {
-	max-width: 1000px;
-	padding: 25px;
-	min-height: 200px;
-	border-radius: 5px;
-	margin: auto auto 30px auto;
-	display:block;
-	overflow:auto;
-
-	background-color: #DBC381;
-}
-
 .result-left {	
 	float: left;
 	width: 60%;
@@ -42,12 +30,8 @@ body {
 	float: right;
 }
 
-.beer-picture {
-	float: left;
-	height: 150px;
-	width: 150px;
-	border-radius: 100%;
-	margin-right: 5%;
+.beer-description {
+	text-align: justify;
 }
 
 .beer-flag, .beer-taste, .beer-flavor {
