@@ -25,11 +25,18 @@ body {
 	text-align: justify;
 }
 
-.beer-flag, .beer-taste, .beer-flavor {
+.beer-taste, .beer-flavor {
 	width: 30px;
 	height: 30px;
 	vertical-align: top;
 	margin-bottom: 15px;
+}
+
+.beer-flag {
+	width: 30px;
+	height: 30px;
+	vertical-align: top;
+	margin-bottom: 5px;
 }
 
 .beer-color {
