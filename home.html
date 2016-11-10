@@ -96,8 +96,23 @@
 							</div>
 		    
 							<div class="card-reveal">
-								<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-								<p>Here is some more information about this product that is only revealed once clicked on.</p>
+								<span class="card-title grey-text text-darken-4">{{r.name}}<i class="material-icons right">close</i></span>
+
+								<div class="result-left">
+									<p class="beer-brand">{{r.brand}}</p>
+									<p class="beer-description">{{r.description}}</p>
+								</div>
+
+								<div class="result-right">
+									<img class="beer-flavor" ng-src="resource/flavor/flavor_{{r.flavor}}.png" alt="This beer is {{r.flavor}} flavored"><br>
+									<img class="beer-taste" ng-src="resource/taste/taste_{{r.taste}}.png" alt="This beer tastes like {{r.taste}}"><br>
+									<img class="beer-flag" ng-src="resource/flag/flag_{{r.country}}.png" alt="This beer was made in {{r.countryLong}}"><br>
+								</div>
+
+								<div class="result-middle">
+									<p class="beer-abv">{{r.abv}}%</p>
+									<img class="beer-color" ng-src="resource/color/color_{{r.color}}.png" alt="This beer is {{r.color}}"><br>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -107,22 +122,7 @@
 				<div class="result" ng-repeat="r in results">
 					<img class="beer-picture" ng-src="{{r.picture}}" alt="{{r.name}}">
 
-					<div class="result-left">
-						<h3 class="beer-name">{{r.name}}</h3>
-						<p class="beer-brand">{{r.brand}}</p>
-						<p class="beer-description">{{r.description}}</p>
-					</div>
 
-					<div class="result-right">
-						<img class="beer-flavor" ng-src="resource/flavor/flavor_{{r.flavor}}.png" alt="This beer is {{r.flavor}} flavored"><br>
-						<img class="beer-taste" ng-src="resource/taste/taste_{{r.taste}}.png" alt="This beer tastes like {{r.taste}}"><br>
-						<img class="beer-flag" ng-src="resource/flag/flag_{{r.country}}.png" alt="This beer was made in {{r.countryLong}}"><br>
-					</div>
-
-					<div class="result-middle">
-						<p class="beer-abv">{{r.abv}}%</p>
-						<img class="beer-color" ng-src="resource/color/color_{{r.color}}.png" alt="This beer is {{r.color}}"><br>
-					</div>
 				</div>
 			</section>
 
