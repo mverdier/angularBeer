@@ -80,8 +80,10 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 	$scope.search = function() {
 
-		$('#titles').slideToggle('slow');
-		$('#dontworry').slideToggle('slow');
+		if (document.getElementById('titles').style.display != "none") {
+			$('#titles').slideToggle('slow');
+			$('#dontworry').slideToggle('slow');
+		}
 
 		var params = "";
 
