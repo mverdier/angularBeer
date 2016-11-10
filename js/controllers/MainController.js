@@ -9,7 +9,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 		"country": "BE",
 		"countryLong": "Belgium",
 		"taste": "sugar",
-		"picture": "../resource/beer/liefmans_fruitesse.png",
+		"picture": "resource/beer/liefmans_fruitesse.png",
 		"description": "Sipping a Liefmans Fruitesse on the rocks is like taking a city break in Berlin, soaking up the atmosphere in Milan or discovering culture in New York. Take your time to enjoy it in a friendly bar, or chilling out with your friends."
 	},
 
@@ -22,12 +22,12 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 		"country": "BE",
 		"countryLong": "Belgium",
 		"taste": "sugar",
-		"picture": "../resource/beer/liefmans_fruitesse.png",
+		"picture": "resource/beer/liefmans_fruitesse.png",
 		"description": "This is a description"
 	}];
 
 	$scope.search = function() {
-		
+
 		$('#titles').slideToggle('slow');
 		$('#dontworry').slideToggle('slow');
 
