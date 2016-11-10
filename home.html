@@ -21,8 +21,8 @@
 		
 				<p id="dontworry" class="center">Don't worry, you don't have to fill all of these, just the ones you like.</p>
 
-				<div class="row">
-					<div class="filter col s6 input-field">
+				<div class="row filters">
+					<div class="col s6 input-field">
 						<input id="beer_brand" type="text" name="brand" ng-model="brand">
 						<label for="beer_brand">What's the brand?</label>
 					</div>
@@ -32,7 +32,7 @@
 						<label for="beer_name">Does your beer have a name?</label>
 					</div>
 
-					<div class="filter col s6 input-field">
+					<div class="col s6 input-field">
 						<select id="color" ng-model="color">
 							<option value="" selected="selected">Any</option>
 							<option value="Blonde">Blonde</option>
@@ -44,7 +44,7 @@
 						<label>Want a specific color type?</label>
 					</div>
 
-					<div class="filter col s6 input-field">
+					<div class="col s6 input-field">
 						<select id="country" ng-model="country">
 							<option value="" selected="selected">Any</option>
 							<option value="DE">Germany</option>
@@ -56,7 +56,7 @@
 						<label>Where do you want it from?</label>
 					</div>
 
-					<div class="filter col s6 input-field">
+					<div class="col s6 input-field">
 						<select id="flavor" ng-model="flavor">
 							<option value="" selected="selected">Doesn't matter</option>
 							<option value="not">No specific flavor</option>
@@ -66,8 +66,8 @@
 						<label>Want it flavored?</label>
 					</div>
 
-					<div class="filter col s6 input-field">
-						<select eid="taste" ng-model="taste">
+					<div class="col s6 input-field">
+						<select id="taste" ng-model="taste">
 							<option value="" selected="selected">I don't care</option>
 							<option value="bitter">Bitter</option>
 							<option value="sugar">Sugar</option>

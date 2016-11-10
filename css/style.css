@@ -15,6 +15,10 @@ body {
 	width: 60%;
 }
 
+.filters {
+	padding-top: 15px;
+}
+
 .result {
 	max-width: 1000px;
 	padding: 25px;
