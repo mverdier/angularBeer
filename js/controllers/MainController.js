@@ -27,6 +27,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 	}];
 
 	$scope.search = function() {
+		
+		$('#titles').slideToggle('slow');
+		$('#dontworry').slideToggle('slow');
 
 		var params = "";
 
