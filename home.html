@@ -5,6 +5,7 @@
 		<title>Beer Matchup</title>
 		<link rel="stylesheet" href="css/materialize.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="js/angular.min.js"></script>
 	</head>
 	
@@ -81,7 +82,28 @@
 				</div>
 			</section>
 
-			<section id="list" class="container">
+			<section id="results" class="container">
+
+				<div class="row">
+					<div class="col l4 m6 s12" ng-repeat="r in results">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" ng-src="{{r.picture}}" alt="{{r.name}}">
+							</div>
+
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">{{r.name}}<i class="material-icons right">more_vert</i></span>
+							</div>
+		    
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 				<div class="result" ng-repeat="r in results">
 					<img class="beer-picture" ng-src="{{r.picture}}" alt="{{r.name}}">
 
