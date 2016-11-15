@@ -80,10 +80,10 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			document.getElementById('loading').style.display = "none";
 			document.getElementById('submit').disable = false;
 
-			if (response.length === 0) {
+			if (response.data.length === 0) {
 				document.getElementById('empty-list').style.display = "block";
 			} else {
-				result = response;
+				result = response.data;
 				document.getElementById('results').style.display = "block";
 			}
 
