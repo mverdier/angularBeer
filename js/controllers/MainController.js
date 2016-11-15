@@ -75,7 +75,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 		$http({
 			method: 'GET',
-			url: 'http://localhost:3000/api/get' + params
+			url: 'http://beer.martin-verdier.com/api/get' + params
 		}).then(function successCallback(response) {
 			document.getElementById('loading').style.display = "none";
 			document.getElementById('submit').disable = false;
