@@ -11,6 +11,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 		document.getElementById('submit').disable = true;
 		document.getElementById('loading').style.display = "block";
+		document.getElementById('results').style.display = "none";
+		document.getElementById('empty-list').style.display = "none";
+		document.getElementById('error').style.display = "none";
 
 		var params = "";
 
