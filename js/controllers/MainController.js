@@ -9,6 +9,8 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			$('#dontworry').slideToggle('slow');
 		}
 
+		$('#submit').disable = true;
+
 		var params = "";
 
 		if ($scope.name !== undefined) {
@@ -74,9 +76,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			method: 'GET',
 			url: 'http://localhost:3000/api/get' + params
 		}).then(function successCallback(response) {
-			
+			$('#submit').disable = false;
 		}, function errorCallback(response) {
-			
+			$('#submit').disable = false;
 		});
 
 		$scope.results = result;
