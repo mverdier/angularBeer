@@ -1,8 +1,6 @@
 app.controller('MainController', ['$scope', '$http', function($scope, $http) {
-
-	var result;
-
-	var getData = function() {
+	
+	$scope.search = function() {
 
 		if (document.getElementById('titles').style.display != "none") {
 			$('#titles').slideToggle('slow');
@@ -86,7 +84,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			if (response.data.length === 0) {
 				document.getElementById('empty-list').style.display = "block";
 			} else {
-				return response.data;
+				$scope.results = response.data;
 				document.getElementById('results').style.display = "block";
 			}
 
@@ -95,12 +93,5 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			document.getElementById('submit').disable = false;
 			document.getElementById('error').style.display = "block";
 		});
-
-		$scope.results = result;
 	};
-
-	$scope.search = getData().then(function(beers) {
-		$scope.result = beers;
-	})
-
 }]);
