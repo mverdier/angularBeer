@@ -2,7 +2,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 	var result;
 
-	$scope.search = function() {
+	var getData = function() {
 
 		if (document.getElementById('titles').style.display != "none") {
 			$('#titles').slideToggle('slow');
@@ -86,7 +86,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			if (response.data.length === 0) {
 				document.getElementById('empty-list').style.display = "block";
 			} else {
-				result = response.data;
+				return response.data;
 				document.getElementById('results').style.display = "block";
 			}
 
@@ -98,4 +98,9 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 
 		$scope.results = result;
 	};
+
+	$scope.search = getData().then(function(beers) {
+		$scope.result = beers;
+	})
+
 }]);
