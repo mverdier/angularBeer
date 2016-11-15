@@ -9,7 +9,8 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			$('#dontworry').slideToggle('slow');
 		}
 
-		$('#submit').disable = true;
+		document.getElementById('submit').disable = true;
+		document.getElementById('loading').style.display = "block";
 
 		var params = "";
 
@@ -76,9 +77,20 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			method: 'GET',
 			url: 'http://localhost:3000/api/get' + params
 		}).then(function successCallback(response) {
-			$('#submit').disable = false;
+			document.getElementById('loading').style.display = "none";
+			document.getElementById('submit').disable = false;
+
+			if (response.length === 0) {
+				document.getElementById('empty-list').style.display = "block";
+			} else {
+				result = response;
+				document.getElementById('results').style.display = "block";
+			}
+
 		}, function errorCallback(response) {
-			$('#submit').disable = false;
+			document.getElementById('loading').style.display = "none";
+			document.getElementById('submit').disable = false;
+			document.getElementById('error').style.display = "block";
 		});
 
 		$scope.results = result;
