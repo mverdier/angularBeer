@@ -45,6 +45,7 @@ body {
 }
 
 #empty-list, #loading, #error {
+	margin-top: 80px;
 	display: none;
 	text-align: center;
 	font-size: 25px;
