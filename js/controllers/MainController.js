@@ -7,7 +7,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http) {
 			$('#dontworry').slideToggle('slow');
 		}
 
-		document.getElementById('submit').disable = true;
+		document.getElementById('submit').disabled = true;
 		document.getElementById('loading').style.display = "block";
 		document.getElementById('results').style.display = "none";
 		document.getElementById('empty-list').style.display = "none";
